@@ -13,7 +13,16 @@ To install:
 ```
 git clone https://github.com/toast-t-bread/archinstallscript.git
 cd archinstallscript
-./script.sh
 ```
+
+if you have sudo installed (most people):
+``sudo chmod +x script.sh``
+
+if you have doas installed (pretty rare and not mutually exclusive)
+``doas chmod +x script.sh``
+
+and finally:
+
+``./script.sh``
 
 The script will automatically self-destruct unless you cancel it at the end so if you want to keep it arund for whatever reason, keep an eye on it!
