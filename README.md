@@ -22,4 +22,3 @@ cd archinstallscript
 ./script.sh
 ```
 
-The script will automatically self-destruct unless you cancel it at the end so if you want to keep it arund for whatever reason, keep an eye on it!

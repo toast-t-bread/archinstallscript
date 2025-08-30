@@ -242,12 +242,5 @@ while true; do
 done
 clear
 echo "If you want other emulators, write \"yay EMULATOR\" and it will automatically search it for you."
-read -rp "
-Press enter to exit and automatically delete the script or press ctrl+c to cancel and keep it."
 
-cd .. || exit
-if [ -d archinstall ]; then
-	rm -rf archinstall
-else
-	echo "It's already gone???"
-fi
+
