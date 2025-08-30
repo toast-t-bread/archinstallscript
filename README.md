@@ -10,6 +10,12 @@ Note: this script will probably not be updated so only use this within a few mon
 
 To install:
 
+First open a terminal if you're in a graphical session, and install git with whichever works
+
+``sudo pacman -S git``
+``doas pacman -S git``
+``su -c 'pacman -S git'``
+
 ```
 git clone https://github.com/toast-t-bread/archinstallscript.git
 cd archinstallscript
