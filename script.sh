@@ -24,10 +24,13 @@ $DOAS pacman -Syu --noconfirm
 
 clear
 
-echo -e \\n"Installing reflector, git, and zsh, if not already installed"\\n
+echo -e \\n"Installing reflector, and rsync, if not already installed"\\n
 
 sleep 1
 $DOAS pacman -S --noconfirm reflector rsync
+
+sleep 2
+clear
 
 echo -e \\n"Updating mirrorlist"\\n
 $DOAS reflector --latest 15 --sort rate --save /etc/pacman.d/mirrorlist
