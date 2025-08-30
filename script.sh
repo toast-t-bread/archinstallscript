@@ -101,6 +101,7 @@ $DOAS pacman -S --noconfirm base-devel
 function installyay {
 git clone https://aur.archlinux.org/yay.git
 cd yay || exit
+$DOAS pacman -S --noconfirm go
 makepkg -si
 cd ..
 rm -rf yay
