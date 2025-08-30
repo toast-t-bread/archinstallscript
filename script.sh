@@ -169,7 +169,7 @@ clear
 
 echo -e \\n"Installing quality of life tools/apps"\\n
 sleep 1
-yay --noconfirm -S pamac-all reflector-simple gparted man-db w3m lynx feh vlc wget curl htop
+yay --noconfirm -S pamac-flatpak reflector-simple gparted man-db w3m lynx feh vlc wget curl htop
 
 clear
 
