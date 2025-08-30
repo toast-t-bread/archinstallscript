@@ -56,41 +56,6 @@ fi
 
 clear
 
-echo -e \\n "Which text editor do you want?
-
-Nano, best for beginners.
-Vim, more advanced (and easier to get stuck in)
-ee, traditional on bsd systems, incredibly simple and best for beginners next to nano.
-Emacs. (don't)"
-
-while true; do
-	read -rp "Type the full name in all lowercase to select: " editor
-	case $editor in
-		"nano")
-			echo
-			$DOAS pacman -S --confirm nano
-			break;;
-		"vim")
-			echo
-			$DOAS pacman -S --noconfirm vim
-			break;;
-		"ee")
-			echo
-			$DOAS pacman -S --noconfirm ee-editor
-			break;;
-		"emacs")
-			echo
-			echo please stop
-			echo
-			$DOAS pacman -S --noconfirm emacs
-			break;;
-		*)
-			echo Invalid option
-	esac
-done
-
-clear
-
 echo
 sleep 1
 echo Installing yay, an AUR helper
@@ -120,6 +85,41 @@ else
 fi
 
 clear
+echo -e \\n"Which text editor do you want?
+
+Nano, best for beginners.
+Vim, more advanced (and easier to get stuck in)
+ee, traditional on bsd systems, incredibly simple and best for beginners next to nano.
+Emacs. (don't)"
+
+while true; do
+	read -rp "Type the full name in all lowercase to select: " editor
+	case $editor in
+		"nano")
+			echo
+			$DOAS pacman -S --confirm nano
+			break;;
+		"vim")
+			echo
+			$DOAS pacman -S --noconfirm vim
+			break;;
+		"ee")
+			echo
+			yay -S --noconfirm ee-editor
+			break;;
+		"emacs")
+			echo
+			echo please stop
+			echo
+			$DOAS pacman -S --noconfirm emacs
+			break;;
+		*)
+			echo Invalid option
+	esac
+done
+
+clear
+
 
 echo -e \\n "What shell would you like to use?
 Bash, the default shell. Decently customizable and universal.
