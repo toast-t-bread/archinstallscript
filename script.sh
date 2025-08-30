@@ -246,7 +246,7 @@ read -rp "
 Press enter to exit and automatically delete the script or press ctrl+c to cancel and keep it."
 
 cd .. || exit
-if [ -d archinstall]; then
+if [ -d archinstall ]; then
 	rm -rf archinstall
 else
 	echo "It's already gone???"
