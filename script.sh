@@ -234,7 +234,7 @@ while true; do
 		[yY] )
 			$DOAS pacman -S --noconfirm retroarch retroarch-assets-xmb retroarch-assets-ozone
 			$editor retroarch-cores
-			$DOAS pacman -S --noconfirm < retroarch-cores
+			$DOAS pacman -S --noconfirm $(cat retroarch-cores)
 			break;;
 		[nN] )
 			break;;
